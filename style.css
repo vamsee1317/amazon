@@ -1,14 +1,16 @@
-/* Base */
+/* Reset and Base Styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Outfit', sans-serif;
   background: #f2f2f2;
 }
 
+/* Container */
 .container {
   display: flex;
   justify-content: center;
@@ -16,6 +18,7 @@ body {
   min-height: 100vh;
 }
 
+/* Login & SignUp Box */
 .login-box {
   background: #fff;
   display: flex;
@@ -32,15 +35,18 @@ body {
   flex: 1;
   padding: 40px;
 }
+
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
 }
+
 .logo img {
   width: 40px;
 }
+
 .form h2 {
   margin-bottom: 20px;
   font-size: 24px;
@@ -50,44 +56,50 @@ body {
 /* Input Fields */
 .input-group {
   position: relative;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
+
 .input-group i {
   position: absolute;
-  top: 12px;
+  top: 10px;
   left: 10px;
   color: #888;
 }
+
 .input-group input {
   width: 100%;
-  padding: 12px 12px 12px 35px;
+  padding: 10px 10px 10px 35px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 14px;
 }
 
-/* Error and Success */
-.input-error {
+/* Error & Success Messages */
+.input-error,
+.error-msg {
   font-size: 13px;
   color: red;
   margin-top: 5px;
 }
+
 .success-msg {
-  font-size: 14px;
+  font-size: 13px;
   color: green;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-/* Button and Links */
+/* Options & Button */
 .options {
   text-align: right;
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
+
 .options a {
   font-size: 13px;
   color: #007bff;
   text-decoration: none;
 }
+
 .btn {
   width: 100%;
   padding: 12px;
@@ -96,19 +108,28 @@ body {
   color: #fff;
   border-radius: 6px;
   font-size: 16px;
+  margin-top: 20px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
 .signup-text {
   font-size: 13px;
   margin-top: 15px;
   color: #444;
+  text-align: center;
 }
+
 .signup-text a {
   color: #007bff;
   text-decoration: none;
 }
 
-/* Info Section */
+/* Info Section (Side Panel) */
 .info-section {
   flex: 1;
   background: #f0f8ff;
@@ -119,17 +140,21 @@ body {
   padding: 30px;
   text-align: center;
 }
+
 .info-section img {
   max-width: 100%;
   border-radius: 10px;
 }
+
 .text-slider {
   margin-top: 20px;
 }
+
 .text-slider h3 {
   font-size: 20px;
   color: #333;
 }
+
 .text-slider p {
   font-size: 14px;
   color: #666;

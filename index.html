@@ -2,68 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | CodeCraft</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/fd66d77b29.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <main class="container">
+  <div class="container">
     <div class="login-box">
-
       <!-- Form Section -->
       <div class="form-section">
-        <form id="loginForm" class="form" novalidate>
-          <div class="logo">
-            <img src="https://i.ibb.co/YTjW3vF/yt-logo.png" alt="logo" />
-            <h3>CodeCraft</h3>
-          </div>
-
+        <div class="logo">
+          <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" alt="logo" />
+          <h2>CodeCraft</h2>
+        </div>
+        <form id="loginForm" class="form">
           <h2>Login to Your Account</h2>
-
-          <!-- Email Field -->
           <div class="input-group">
             <i class="fas fa-envelope"></i>
-            <input type="email" id="email" placeholder="Email" />
-            <p class="input-error" id="emailError"></p>
+            <input type="email" id="loginEmail" placeholder="Email" required />
           </div>
-
-          <!-- Password Field -->
           <div class="input-group">
             <i class="fas fa-lock"></i>
-            <input type="password" id="password" placeholder="Password" />
-            <p class="input-error" id="passwordError"></p>
+            <input type="password" id="loginPassword" placeholder="Password" required />
           </div>
-
-          <!-- Success Message -->
-          <p class="success-msg" id="successMsg"></p>
-
+          <p class="error-msg" id="loginError"></p>
+          <p class="success-msg" id="loginSuccess"></p>
           <div class="options">
-            <a href="#" class="forgot">Forgot Password?</a>
+            <a href="#">Forgot Password?</a>
           </div>
-
           <button type="submit" class="btn">Login</button>
-
-          <p class="signup-text">
-            Don't have an account? <a href="#">Sign Up</a>
-          </p>
+          <p class="signup-text">Don't have an account? <a href="signUp.html">Sign Up</a></p>
         </form>
       </div>
 
-      <!-- Info Visual Section -->
+      <!-- Info Section -->
       <div class="info-section">
-        <img src="https://i.ibb.co/YTjW3vF/yt-logo.png" alt="coding" />
+        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" alt="info" />
         <div class="text-slider">
-          <h3>Start your coding journey</h3>
-          <p>Frontend. Backend. Full Stack.</p>
+          <h3>Welcome to CodeCraft</h3>
+          <p>Level up your skills and become a pro developer!</p>
         </div>
       </div>
     </div>
-  </main>
-
-  <script src="script.js"></script>
+  </div>
 </body>
 </html>

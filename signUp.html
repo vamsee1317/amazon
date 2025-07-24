@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | CodeCraft</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <!-- Form Section -->
+      <div class="form-section">
+        <div class="logo">
+          <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" alt="logo" />
+          <h2>CodeCraft</h2>
+        </div>
+        <form id="signupForm" class="form">
+          <h2>Create Your Account</h2>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="signupName" placeholder="Full Name" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="signupEmail" placeholder="Email" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="signupPassword" placeholder="Password" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+          </div>
+          <p class="error-msg" id="signupError"></p>
+          <p class="success-msg" id="signupSuccess"></p>
+          <button type="submit" class="btn">Sign Up</button>
+          <p class="signup-text">Already have an account? <a href="index.html">Login</a></p>
+        </form>
+      </div>
+
+      <!-- Info Section -->
+      <div class="info-section">
+        <img src="https://images.pexels.com/photos/102061/pexels-photo-102061.jpeg" alt="info" />
+        <div class="text-slider">
+          <h3>Join CodeCraft</h3>
+          <p>Your coding journey begins here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

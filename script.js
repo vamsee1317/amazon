@@ -1,50 +1,40 @@
-const form = document.getElementById("loginForm");
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
-
-const emailError = document.getElementById("emailError");
-const passwordError = document.getElementById("passwordError");
-const successMsg = document.getElementById("successMsg");
-
-form.addEventListener("submit", function (e) {
+// Login Form Validation
+document.getElementById("loginForm")?.addEventListener("submit", function (e) {
   e.preventDefault();
+  const email = document.getElementById("loginEmail").value.trim();
+  const password = document.getElementById("loginPassword").value.trim();
+  const error = document.getElementById("loginError");
+  const success = document.getElementById("loginSuccess");
 
-  const email = emailInput.value.trim();
-  const password = passwordInput.value.trim();
-
-  // Clear previous messages
-  emailError.textContent = "";
-  passwordError.textContent = "";
-  successMsg.textContent = "";
-
-  // Regular Expressions
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const passwordRegex = /^(?=.*[0-9!@#$%^&*])[A-Za-z0-9!@#$%^&*]{6,}$/;
-
-  let isValid = true;
-
-  // Email validation
-  if (email === "") {
-    emailError.textContent = "Email is required.";
-    isValid = false;
-  } else if (!emailRegex.test(email)) {
-    emailError.textContent = "Please enter a valid email address.";
-    isValid = false;
+  if (email === "" || password === "") {
+    error.textContent = "Please fill in all fields.";
+    success.textContent = "";
+  } else {
+    error.textContent = "";
+    success.textContent = "Login successful!";
+    this.reset();
   }
+});
 
-  // Password validation
-  if (password === "") {
-    passwordError.textContent = "Password is required.";
-    isValid = false;
-  } else if (!passwordRegex.test(password)) {
-    passwordError.textContent =
-      "Password must be at least 6 characters and include a number or special character.";
-    isValid = false;
-  }
+// Signup Form Validation
+document.getElementById("signupForm")?.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const name = document.getElementById("signupName").value.trim();
+  const email = document.getElementById("signupEmail").value.trim();
+  const password = document.getElementById("signupPassword").value.trim();
+  const confirm = document.getElementById("confirmPassword").value.trim();
+  const error = document.getElementById("signupError");
+  const success = document.getElementById("signupSuccess");
 
-  // Show success message
-  if (isValid) {
-    successMsg.textContent = "Login successful!";
-    form.reset();
+  if (!name || !email || !password || !confirm) {
+    error.textContent = "Please fill in all fields.";
+    success.textContent = "";
+  } else if (password !== confirm) {
+    error.textContent = "Passwords do not match.";
+    success.textContent = "";
+  } else {
+    error.textContent = "";
+    success.textContent = "Account created successfully!";
+    this.reset();
   }
 });
