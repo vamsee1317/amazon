@@ -1,38 +1,50 @@
-// JavaScript Login Form Validation
 const form = document.getElementById("loginForm");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
-const errorMsg = document.getElementById("errorMsg");
+
+const emailError = document.getElementById("emailError");
+const passwordError = document.getElementById("passwordError");
+const successMsg = document.getElementById("successMsg");
 
 form.addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent default form submission
+  e.preventDefault();
 
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
 
-  // Regular expression to validate email format
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Clear previous messages
+  emailError.textContent = "";
+  passwordError.textContent = "";
+  successMsg.textContent = "";
 
-  // Password must be at least 6 chars, contain 1 number or special character
+  // Regular Expressions
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const passwordRegex = /^(?=.*[0-9!@#$%^&*])[A-Za-z0-9!@#$%^&*]{6,}$/;
 
-  let errors = [];
+  let isValid = true;
 
-  if (!emailRegex.test(email)) {
-    errors.push("Please enter a valid email address.");
+  // Email validation
+  if (email === "") {
+    emailError.textContent = "Email is required.";
+    isValid = false;
+  } else if (!emailRegex.test(email)) {
+    emailError.textContent = "Please enter a valid email address.";
+    isValid = false;
   }
 
-  if (!passwordRegex.test(password)) {
-    errors.push(
-      "Password must be at least 6 characters and include a number or special character."
-    );
+  // Password validation
+  if (password === "") {
+    passwordError.textContent = "Password is required.";
+    isValid = false;
+  } else if (!passwordRegex.test(password)) {
+    passwordError.textContent =
+      "Password must be at least 6 characters and include a number or special character.";
+    isValid = false;
   }
 
-  if (errors.length > 0) {
-    errorMsg.textContent = errors.join(" ");
-  } else {
-    errorMsg.textContent = "";
-    alert("Login successful!");
+  // Show success message
+  if (isValid) {
+    successMsg.textContent = "Login successful!";
     form.reset();
   }
 });

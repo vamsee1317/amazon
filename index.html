@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login Page</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,84 +11,54 @@
   <script src="https://kit.fontawesome.com/fd66d77b29.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <main>
-    <div class="box">
-      <!-- Left Side -->
-      <div class="inner-box">
-        <div class="forms-wrap">
-          <form id="loginForm" class="form" autocomplete="off">
-            <div class="logo">
-              <img src="https://i.ibb.co/YTjW3vF/yt-logo.png" alt="logo" />
-              <h4>CodeCraft</h4>
-            </div>
+  <main class="container">
+    <div class="login-box">
 
-            <div class="heading">
-              <h2>Welcome Back</h2>
-              <h6>Not registered yet?</h6>
-              <a href="#" class="toggle">Sign up</a>
-            </div>
-
-            <!-- Email input -->
-            <div class="actual-form">
-              <div class="input-wrap">
-                <i class="fas fa-envelope"></i>
-                <input
-                  type="email"
-                  id="email"
-                  class="input"
-                  placeholder="Email"
-                  required
-                />
-              </div>
-
-              <!-- Password input -->
-              <div class="input-wrap">
-                <i class="fas fa-lock"></i>
-                <input
-                  type="password"
-                  id="password"
-                  class="input"
-                  placeholder="Password"
-                  required
-                />
-              </div>
-
-              <!-- Error message display -->
-              <p class="error" id="errorMsg"></p>
-
-              <p class="page-link">
-                <span class="page-link-label">Forgot Password?</span>
-              </p>
-
-              <button type="submit" class="form-btn">Log in</button>
-
-              <p class="text">
-                Don't have an account?
-                <a href="#">Sign up now</a>
-              </p>
-            </div>
-          </form>
-        </div>
-
-        <!-- Right Side Image or Text -->
-        <div class="carousel">
-          <div class="images-wrapper">
-            <img src="https://source.unsplash.com/400x400/?code" class="image img-1 show" alt="coding" />
+      <!-- Form Section -->
+      <div class="form-section">
+        <form id="loginForm" class="form" novalidate>
+          <div class="logo">
+            <img src="https://i.ibb.co/YTjW3vF/yt-logo.png" alt="logo" />
+            <h3>CodeCraft</h3>
           </div>
-          <div class="text-slider">
-            <div class="text-wrap">
-              <div class="text-group">
-                <h2>Build your coding career</h2>
-                <h2>Master frontend & backend</h2>
-                <h2>Become job ready</h2>
-              </div>
-            </div>
-            <div class="bullets">
-              <span class="active"></span>
-              <span></span>
-              <span></span>
-            </div>
+
+          <h2>Login to Your Account</h2>
+
+          <!-- Email Field -->
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email" />
+            <p class="input-error" id="emailError"></p>
           </div>
+
+          <!-- Password Field -->
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" placeholder="Password" />
+            <p class="input-error" id="passwordError"></p>
+          </div>
+
+          <!-- Success Message -->
+          <p class="success-msg" id="successMsg"></p>
+
+          <div class="options">
+            <a href="#" class="forgot">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="btn">Login</button>
+
+          <p class="signup-text">
+            Don't have an account? <a href="#">Sign Up</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- Info Visual Section -->
+      <div class="info-section">
+        <img src="https://i.ibb.co/YTjW3vF/yt-logo.png" alt="coding" />
+        <div class="text-slider">
+          <h3>Start your coding journey</h3>
+          <p>Frontend. Backend. Full Stack.</p>
         </div>
       </div>
     </div>

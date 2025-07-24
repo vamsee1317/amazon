@@ -1,159 +1,136 @@
-/* Basic reset */
+/* Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Outfit', sans-serif;
-  background: #f4f4f4;
+  background: #f2f2f2;
 }
 
-main {
+.container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
-.box {
-  background-color: #fff;
-  width: 90%;
-  max-width: 1000px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  overflow: hidden;
+.login-box {
+  background: #fff;
   display: flex;
   flex-wrap: wrap;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.inner-box {
-  display: flex;
+/* Form Section */
+.form-section {
   flex: 1;
-}
-
-.forms-wrap {
   padding: 40px;
-  flex: 1;
 }
-
-.form {
-  display: flex;
-  flex-direction: column;
-}
-
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
 }
-
 .logo img {
   width: 40px;
-  height: 40px;
 }
-
-.heading h2 {
+.form h2 {
+  margin-bottom: 20px;
   font-size: 24px;
+  color: #333;
 }
 
-.heading h6,
-.heading a {
-  font-size: 14px;
-  margin-top: 5px;
-  color: #888;
-  text-decoration: none;
-}
-
-.input-wrap {
+/* Input Fields */
+.input-group {
   position: relative;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
-
-.input-wrap i {
+.input-group i {
   position: absolute;
-  top: 10px;
+  top: 12px;
   left: 10px;
   color: #888;
 }
-
-.input {
+.input-group input {
   width: 100%;
-  padding: 10px 10px 10px 35px;
+  padding: 12px 12px 12px 35px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  font-size: 14px;
 }
 
-.error {
+/* Error and Success */
+.input-error {
+  font-size: 13px;
   color: red;
-  font-size: 12px;
-  margin: 10px 0;
+  margin-top: 5px;
+}
+.success-msg {
+  font-size: 14px;
+  color: green;
+  margin-bottom: 10px;
 }
 
-.page-link {
-  margin-top: 10px;
-  font-size: 12px;
-  color: #007BFF;
-  cursor: pointer;
+/* Button and Links */
+.options {
+  text-align: right;
+  margin-bottom: 20px;
 }
-
-.form-btn {
-  margin-top: 20px;
-  background-color: #007BFF;
-  color: white;
-  padding: 10px;
+.options a {
+  font-size: 13px;
+  color: #007bff;
+  text-decoration: none;
+}
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
   border: none;
+  color: #fff;
   border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
 }
-
-.text {
-  font-size: 12px;
-  margin-top: 10px;
-  color: #555;
+.signup-text {
+  font-size: 13px;
+  margin-top: 15px;
+  color: #444;
+}
+.signup-text a {
+  color: #007bff;
+  text-decoration: none;
 }
 
-.carousel {
+/* Info Section */
+.info-section {
   flex: 1;
-  background: #f0f0f0;
+  background: #f0f8ff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.images-wrapper {
-  width: 100%;
+  padding: 30px;
   text-align: center;
 }
-
-.image {
+.info-section img {
   max-width: 100%;
   border-radius: 10px;
 }
-
 .text-slider {
   margin-top: 20px;
-  text-align: center;
 }
-
-.text-group h2 {
-  font-size: 18px;
-  margin: 10px 0;
+.text-slider h3 {
+  font-size: 20px;
+  color: #333;
 }
-
-.bullets span {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin: 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.bullets .active {
-  background-color: #007BFF;
+.text-slider p {
+  font-size: 14px;
+  color: #666;
 }
