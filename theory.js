@@ -29,3 +29,7 @@
 // git push
 // git pull
 // git clone <repository-url>
+// git remote rm <repository-url>
+// git remote add origin <repository-url>
+// git branch -m <branch-name>
+// git branch -d <branch-name>
